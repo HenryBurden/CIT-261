@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<title>QWIXX Scorecard</title>
+	<link rel="shortcut icon" type="image/x-icon" href="dice.png" />
+	<meta name="viewport" content="user-scalable=no" />
+	<link href="quixx.css" rel="stylesheet" type="text/css">
+
+	<script src="quixx.js" defer="true"></script>
+</head>
+
+<body>
+
+	<h2>QWIXX</h2>
+
+	<!-- The Modal -->
+	<div id="myModal" class="modal">
+
+		<!-- Modal content -->
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<h3 style="font-size: 70px;">&nbsp;&nbsp;High Scores</h3>
+			<table id="modalScores" align="center"></table>
+		</div>
+
+	</div>
+
+	<div style="background: #FF271D;">
+		&nbsp
+		<button id="r2" class="button button1" onclick="change(id)">2</button>
+		<button id="r3" class="button button1" onclick="change(id)">3</button>
+		<button id="r4" class="button button1" onclick="change(id)">4</button>
+		<button id="r5" class="button button1" onclick="change(id)">5</button>
+		<button id="r6" class="button button1" onclick="change(id)">6</button>
+		<button id="r7" class="button button1" onclick="change(id)">7</button>
+		<button id="r8" class="button button1" onclick="change(id)">8</button>
+		<button id="r9" class="button button1" onclick="change(id)">9</button>
+		<button id="r10" class="button button1" onclick="change(id)">10</button>
+		<button id="r11" class="button button1" onclick="change(id)">11</button>
+		<button id="r12" class="button button1" onclick="change(id)" disabled>12</button>
+
+		<button id="r13" class=" button button1 rLock" onclick="change(id)"> &nbsp </button>
+		&nbsp
+	</div>
+
+	<div style="background: #FCC917;">
+		&nbsp
+		<button id="y2" class="button button2" onclick="change(id)">2</button>
+		<button id="y3" class="button button2" onclick="change(id)">3</button>
+		<button id="y4" class="button button2" onclick="change(id)">4</button>
+		<button id="y5" class="button button2" onclick="change(id)">5</button>
+		<button id="y6" class="button button2" onclick="change(id)">6</button>
+		<button id="y7" class="button button2" onclick="change(id)">7</button>
+		<button id="y8" class="button button2" onclick="change(id)">8</button>
+		<button id="y9" class="button button2" onclick="change(id)">9</button>
+		<button id="y10" class="button button2" onclick="change(id)">10</button>
+		<button id="y11" class="button button2" onclick="change(id)">11</button>
+		<button id="y12" class="button button2" onclick="change(id)" disabled>12</button>
+
+		<button id="y13" class="button button2 yLock" onclick="change(id)"> &nbsp </button>
+		&nbsp
+	</div>
+
+	<div style="background: #2C6900;">
+		&nbsp
+		<button id="g12" class="button button3" onclick="change2(id)">12</button>
+		<button id="g11" class="button button3" onclick="change2(id)">11</button>
+		<button id="g10" class="button button3" onclick="change2(id)">10</button>
+		<button id="g9" class="button button3" onclick="change2(id)">9</button>
+		<button id="g8" class="button button3" onclick="change2(id)">8</button>
+		<button id="g7" class="button button3" onclick="change2(id)">7</button>
+		<button id="g6" class="button button3" onclick="change2(id)">6</button>
+		<button id="g5" class="button button3" onclick="change2(id)">5</button>
+		<button id="g4" class="button button3" onclick="change2(id)">4</button>
+		<button id="g3" class="button button3" onclick="change2(id)">3</button>
+		<button id="g2" class="button button3" onclick="change2(id)" disabled>2</button>
+
+		<button id="g13" class="button button3 gLock" onclick="change2(id)"> &nbsp </button>
+		&nbsp
+	</div>
+
+	<div style="background: #001F77;">
+		&nbsp
+		<button id="b12" class="button button4" onclick="change2(id)">12</button>
+		<button id="b11" class="button button4" onclick="change2(id)">11</button>
+		<button id="b10" class="button button4" onclick="change2(id)">10</button>
+		<button id="b9" class="button button4" onclick="change2(id)">9</button>
+		<button id="b8" class="button button4" onclick="change2(id)">8</button>
+		<button id="b7" class="button button4" onclick="change2(id)">7</button>
+		<button id="b6" class="button button4" onclick="change2(id)">6</button>
+		<button id="b5" class="button button4" onclick="change2(id)">5</button>
+		<button id="b4" class="button button4" onclick="change2(id)">4</button>
+		<button id="b3" class="button button4" onclick="change2(id)">3</button>
+		<button id="b2" class="button button4" onclick="change2(id)" disabled>2</button>
+
+		<button id="b13" class="button button4 bLock" onclick="change2(id)"> &nbsp </button>
+		&nbsp
+	</div>
+
+	<div>
+		&nbsp
+		-5
+		<button id="n1" class="button" onclick="xOut(id)"> &nbsp </button>
+		<button id="n2" class="button" onclick="xOut(id)"> &nbsp </button>
+		<button id="n3" class="button" onclick="xOut(id)"> &nbsp </button>
+		<button id="n4" class="button" onclick="xOut(id)"> &nbsp </button>
+		&nbsp
+	</div>
+
+	<div class="flex">
+
+		&nbsp
+		Totals:
+
+		<div style="text-align: center;">
+			<button id="r" class="button button1" disabled> 0 </button>
+			+
+			<button id="y" class="button button2" disabled> 0 </button>
+			+
+			<button id="g" class="button button3" disabled> 0 </button>
+			+
+			<button id="b" class="button button4" disabled> 0 </button>
+			-
+			<button id="n" class="button" disabled> 0 </button>
+		</div>
+	</div>
+	<div>
+		<div class="finalScore">
+			=
+			<button id="t" class="button" disabled> 0 </button>
+		</div>
+	</div>
+	<div style="text-align: center;">
+		<button id="newGame" class="newButton button4" ontouchend="startNewBoard()"> New Game </button>
+		<button id="scores" class="newButton button4 scores"> My High Scores</button>
+	</div>
+
+
+	<script>
+		// Get the modal
+		var modal = document.getElementById("myModal");
+
+		// Get the button that opens the modal
+		var btn = document.getElementById("scores");
+
+		// Get the <span> element that closes the modal
+		var span = document.getElementsByClassName("close")[0];
+
+		// When the user clicks the button, open the modal 
+		btn.onclick = function () {
+			const scoreTable = document.getElementById('modalScores');
+			scoreTable.innerHTML = "";
+			let count = 1;
+
+			//create table header
+			let tableHead = `
+				<tr style="text-align: center; ">
+					<th style="text-align: left;">Rank&nbsp;&nbsp;</th>
+					<th style="text-align: left;">Score</th>
+					<th style="text-align: right;">&nbsp;&nbsp;&nbsp;&nbsp;Date</th>
+				</tr>
+			`
+			scoreTable.innerHTML += tableHead;
+
+			//create html for High Scores
+			highScores.forEach(score => {
+				//split the date from the score
+				let splitScore = score.split(" ");
+
+				//if no date make sure it isn't null
+				if (splitScore[1] == undefined)
+					splitScore[1] = "NA";
+
+				scoreTable.innerHTML += `
+				<tr>
+					<td style="text-align: left;">${count}:&nbsp;&nbsp; </td> 
+					<td style="text-align: left;">${splitScore[0]}</td>
+					<td style="text-align: right;">&nbsp;&nbsp;&nbsp;&nbsp;${splitScore[1]}</td>
+				</tr>
+			`
+				count++;
+			});
+
+			modal.style.display = "block";
+		}
+
+		// When the user clicks on <span> (x), close the modal
+		span.onclick = function () {
+			modal.style.display = "none";
+		}
+
+		// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function (event) {
+			if (event.target == modal) {
+				modal.style.display = "none";
+			}
+		}
+	</script>
+</body>
+
+</html>

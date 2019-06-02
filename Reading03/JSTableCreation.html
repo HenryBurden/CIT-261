@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>JS Table Creation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+</head>
+
+<body>
+    <h1>Mountains</h1>
+
+    <div id="mountains"></div>
+
+    <script>
+        const MOUNTAINS = [{
+                name: "Kilimanjaro",
+                height: 5895,
+                place: "Tanzania"
+            },
+            {
+                name: "Everest",
+                height: 8848,
+                place: "Nepal"
+            },
+            {
+                name: "Mount Fuji",
+                height: 3776,
+                place: "Japan"
+            },
+            {
+                name: "Vaalserberg",
+                height: 323,
+                place: "Netherlands"
+            },
+            {
+                name: "Denali",
+                height: 6168,
+                place: "United States"
+            },
+            {
+                name: "Popocatepetl",
+                height: 5465,
+                place: "Mexico"
+            },
+            {
+                name: "Mont Blanc",
+                height: 4808,
+                place: "Italy/France"
+            }
+        ];
+
+        function createMountainTable() {
+            const divElement = document.getElementById('mountains'); //the div
+            const tableElement = document.createElement('table'); //the Table
+            const tableHead = document.createElement('tr'); //The table heads
+            tableHead.innerHTML = `
+                <th>Name</th>
+                <th>Height</th>
+                <th>Place</th>`
+
+            tableElement.appendChild(tableHead);
+
+            MOUNTAINS.forEach(mountain => {
+                const newMountain = renderMountTable(mountain);
+                tableElement.appendChild(newMountain); //normal table cells
+            });
+            divElement.appendChild(tableElement);
+        }
+
+        function renderMountTable(mountain) {
+            const item = document.createElement('tr');
+            item.innerHTML = `
+                <td>${mountain.name}</td>
+                <td style="text-align: right;">${mountain.height}</td>
+                <td>${mountain.place}</td>`
+
+            return item;
+        }
+
+        window.addEventListener('load', () => {
+            createMountainTable();
+        })
+    </script>
+</body>
+
+</html>

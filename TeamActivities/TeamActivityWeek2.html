@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    
+</head>
+
+<body>
+    <script>
+        const Calculator = {
+            num1: 0,
+            num2: 0,
+            calcTotal: 0,
+
+            add: function () {
+                return this.calcTotal;
+            },
+
+            subtract: function () {
+                return this.calcTotal;
+            },
+
+            multiply: function () {
+                return this.calcTotal;
+            },
+
+            divide: function () {
+                return this.calcTotal;
+            }
+        }
+
+        function pressButton(timesTable) {
+            var num1 = document.getElementById("text").value;
+            var num2 = document.getElementById("text2").value;
+
+            total = 0;
+            if (!isNaN(num1) && !isNaN(num2)) {
+                //total = addNumbers(num1, num2);
+                switch (timesTable) {
+                    case "Sum":
+                        console.log("Sum");
+                        break;
+                    case "+":
+                        console.log("+")
+                        break;
+                    case "-":
+                        console.log("-")
+                        break;
+                    case "x":
+                        console.log("x")
+                        break;
+                    case "/":
+                        console.log("/")
+                        break;
+                }
+                document.getElementById("empty").innerHTML = total;
+
+            } else {
+                document.getElementById("empty").innerHTML = "not a number";
+            }
+        }
+
+        function pressAdd() {
+            var num1 = document.getElementById("text").value;
+            var num2 = document.getElementById("text2").value;
+            total = 0;
+            if (!isNaN(num1) && !isNaN(num2)) {
+                total = addNumbers(num1, num2);
+                document.getElementById("empty").innerHTML = total;
+            } else {
+                document.getElementById("empty").innerHTML = "not a number";
+            }
+        }
+
+        function addNumber(number) {
+            var total = 0;
+            for (i = 1; i <= number; i++) {
+                total += i;
+            }
+            console.log(total)
+            return total
+        }
+
+        function addNumbers(num1, num2) {
+            total = parseInt(num1) + parseInt(num2);
+            return total;
+        }
+    </script>
+    <input type="text" id="text">
+    <br>
+    <input type="text" id="text2"> <br>
+    <button onclick="pressButton('Sum')">Sum</button>
+    <button onclick="pressButton('+')">+</button>
+    <button onclick="pressButton('-')">-</button>
+    <button onclick="pressButton('x')">x</button>
+    <button onclick="pressButton('/')">/</button>
+    <div id="empty"> </div>
+</body>
+
+</html>

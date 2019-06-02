@@ -1,0 +1,257 @@
+td,th {
+    border-bottom: 1px solid rgb(128, 128, 128);
+}
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+    text-align: center;
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    font-size: 55px;
+    text-align: center;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 90px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+element {
+    --width: 7.5%;
+}
+
+div {
+    margin-bottom: 5px;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.flex {
+    flex-wrap: wrap;
+}
+
+.button:disabled {
+    opacity: 0.65;
+}
+
+.newButton {
+    border: none;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 64px;
+    margin: 18px 6px;
+    cursor: pointer;
+    border-radius: 20px;
+    font-weight: bold;
+    height: 120px;
+    outline: none;
+    color: #FF271D;
+    background-color: #FFDAD9;
+}
+
+@media screen and (orientation:portrait) {
+    .button {
+        border: none;
+        padding: 5px 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 64px;
+        margin: 18px 6px;
+        cursor: pointer;
+        border-radius: 20px;
+        font-weight: bold;
+        width: 120px;
+        height: 120px;
+        outline: none;
+        background-color: #DCDCDC;
+    }
+
+    h2 {
+        font-size: 150px;
+        font-family: Arial;
+        font-weight: 900;
+        margin-top: -5px;
+        margin-bottom: -15px;
+        color: #020202;
+    }
+
+    div {
+        font-size: 64px;
+        font-weight: bold;
+    }
+
+    .finalScore {
+        text-align: center;
+        font-size: 84px;
+    }
+
+    #t {
+        width: 240px;
+        font-size: 84px
+    }
+
+    .rLock {
+        background-image: url(redLock.png);
+        background-size: 120px;
+        background-repeat: no-repeat;
+    }
+
+    .yLock {
+        background-image: url(yellowLock.png);
+        background-size: 120px;
+        background-repeat: no-repeat;
+    }
+
+    .gLock {
+        background-image: url(greenLock.png);
+        background-size: 120px;
+        background-repeat: no-repeat;
+    }
+
+    .bLock {
+        background-image: url(blueLock.png);
+        background-size: 120px;
+        background-repeat: no-repeat;
+    }
+}
+
+button:disabled {
+    pointer-events: none;
+}
+
+@media screen and (orientation:landscape) {
+    .button {
+        border: none;
+        padding: 5px 5px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 32px;
+        margin: 6px 6px;
+        cursor: pointer;
+        border-radius: 20px;
+        font-weight: bold;
+        width: 7.5%;
+        height: auto;
+        outline: none;
+        background-color: #DCDCDC;
+    }
+
+    h2 {
+        font-size: 50px;
+        font-family: Arial;
+        font-weight: 900;
+        margin-bottom: -5px;
+        margin-top: -15px;
+        color: #020202;
+    }
+
+    div {
+        font-size: 32px;
+        font-weight: bold;
+    }
+
+    .finalScore {
+        text-align: center;
+        font-size: 42px;
+    }
+
+    #t {
+        width: 15%;
+        font-size: 42px
+    }
+
+    .rLock {
+        background-image: url(redLock.png);
+        background-size: let(--width);
+        background-repeat: no-repeat;
+    }
+
+    .yLock {
+        background-image: url(yellowLock.png);
+        background-size: let(--width);
+        background-repeat: no-repeat;
+    }
+
+    .gLock {
+        background-image: url(greenLock.png);
+        background-size: let(--width);
+        background-repeat: no-repeat;
+    }
+
+    .bLock {
+        background-image: url(blueLock.png);
+        background-size: let(--width);
+        background-repeat: no-repeat;
+    }
+}
+
+
+
+.button1 {
+    color: #FF271D;
+    background-color: #FFDAD9;
+}
+
+/* Red */
+
+.button2 {
+    color: #FCC917;
+    background-color: #FFFFD9;
+}
+
+/* Yellow */
+
+.button3 {
+    color: #2C6900;
+    background-color: #DBFFC7;
+}
+
+/* Green */
+
+.button4 {
+    color: #001F77;
+    background-color: #C7D5FF;
+}
+
+/* Blue */

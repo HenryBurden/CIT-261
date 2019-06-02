@@ -1,0 +1,6 @@
+I plan on revisiting and rewriting a lot of code on an existing mobile web page I created a few months ago.
+ It is a Score card for the game of Qwixx , the implementation works well now, however, I would like to replace
+ a few things such as, the events are onclick events right now, but the page is only meant to be used on mobile devices.
+ I will implement saving of the current score card so that a refresh of the page or if the game is interrupted mid
+ game the browser can load the game where they left off. I will insert a reset button to clear the card, and I will
+ save past scores with their corresponding dates.

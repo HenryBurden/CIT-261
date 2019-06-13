@@ -16,14 +16,12 @@
 
 	<!-- The Modal -->
 	<div id="myModal" class="modal">
-
 		<!-- Modal content -->
 		<div class="modal-content">
 			<span class="close">&times;</span>
-			<h3 style="font-size: 70px;">&nbsp;&nbsp;High Scores</h3>
+			<p id="modalTitle">&nbsp;&nbsp;High Scores</p>
 			<table id="modalScores" align="center"></table>
 		</div>
-
 	</div>
 
 	<div style="background: #FF271D;">
@@ -108,12 +106,9 @@
 		&nbsp
 	</div>
 
-	<div class="flex">
-
-		&nbsp
-		Totals:
-
-		<div style="text-align: center;">
+	<div class="flex scoreBar">
+		<div class="scoreButtons" style="text-align: center;">
+			&nbsp
 			<button id="r" class="button button1" disabled> 0 </button>
 			+
 			<button id="y" class="button button2" disabled> 0 </button>
@@ -121,21 +116,20 @@
 			<button id="g" class="button button3" disabled> 0 </button>
 			+
 			<button id="b" class="button button4" disabled> 0 </button>
-			-
+			&minus;
 			<button id="n" class="button" disabled> 0 </button>
-		</div>
-	</div>
-	<div>
-		<div class="finalScore">
 			=
-			<button id="t" class="button" disabled> 0 </button>
+			<button id="t" class="button" style disabled> 0 </button>
+			&nbsp
 		</div>
-	</div>
-	<div style="text-align: center;">
-		<button id="newGame" class="newButton button4" ontouchend="startNewBoard()"> New Game </button>
-		<button id="scores" class="newButton button4 scores"> My High Scores</button>
 	</div>
 
+
+	<div style="text-align: center;">
+		<button id="newGame" class="newButton button4" ontouchend="startNewBoard()"> New Game </button>
+		<button id="scores" class="newButton button4 scores">My High Scores</button>
+	</div>
+	<p>&nbsp<p>&nbsp</p></p>
 
 	<script>
 		// Get the modal

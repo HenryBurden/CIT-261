@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>MasterMind</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="masterMindStyles.css">
+</head>
+
+<body>
+    <!--End Game Modal-->
+    <div id="endModal" class="modal">
+        <div class="modal-content">
+            <h1 id="endText"></h1>
+            <button id="playAgain" class="modalButton">Play Again?</button>
+        </div>
+    </div>
+
+    <!--Setting Modal-->
+    <div id="settingsModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h1 id="modalTitle">&nbsp;&nbsp;Settings</h1>
+            <div>
+                <h3># of Colors
+                <select id="colorSelect">
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+                </h3>
+            </div>
+            <div>
+                <h3>Max # Guesses
+                <input id="guessSelect" type="number" min="1" max="30">
+                </h3>
+            </div>
+            <p>
+                <h2>Instructions:</h2>
+                Try to guess the randomly generated 4 colored pattern by changing the color of each 
+                circle in the highlighted row, when you are satified with your guess press the 
+                "Check Guess" button. Each time you take a guess,
+                the Check circles will be filled. For every color that was guessed in the correct
+                position, a circle will be colored black. Every time a correct color is guessed in
+                the pattern but in the wrong position a check circle will be colored brown.
+            </p>
+            <button id="save" class="modalButton">Save</button>
+        </div>
+    </div>
+
+    <!--Header-->
+    <div class="header-wrapper">
+        <h1 class="header">MasterMind </h1>
+        <h1 id="settings"><i class="fas fa-cog slow-spin"></i></h1>
+    </div>
+
+    <!--Board-->
+    <div class="top-wrapper">
+        <div class="possible">Possible Colors:</div>
+        <div class="checkText">Check</div>
+    </div>
+    <div id="gameBoard"></div>
+    <br><br><br><br><br>
+
+    <!--Bottom Buttons-->
+    <div class="bottomBar bottom-wrapper">
+        <button class="new" ontouchend="location.reload()">New Game</button>
+        <button class="check">Check Guess</button>
+    </div>
+
+    <!--JavaScript-->
+    <script src="https://kit.fontawesome.com/b765e10124.js"></script>
+    <script src="utilities.js" type="module" defer></script>
+</body>
+
+</html>
